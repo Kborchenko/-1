@@ -56,9 +56,31 @@ p { margin-top: 0; }
 .btn.ghost { color: #dfe9e5; background: rgba(8, 19, 22, .54); border-color: rgba(192, 222, 214, .25); }
 .menu-btn { display: none; border: 0; color: var(--ink); background: transparent; font-size: 28px; }
 
-.hero, .page-hero { position: relative; overflow: hidden; isolation: isolate; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 72% 45%, rgba(53, 105, 93, .13), transparent 29%), linear-gradient(135deg, rgba(6, 15, 17, .65), rgba(8, 18, 27, .48)); }
+.hero, .page-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at 86% 18%, rgba(83, 120, 184, .2), transparent 38%),
+    radial-gradient(ellipse at 12% 84%, rgba(48, 130, 98, .16), transparent 34%),
+    linear-gradient(138deg, #041012 0%, #07151a 52%, #060a12 100%);
+}
 .hero { min-height: 100vh; padding: 152px 0 76px; display: flex; align-items: flex-end; }
 .page-hero { padding: 176px 0 92px; }
+.hero::before, .page-hero::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: -20%;
+  pointer-events: none;
+  opacity: .9;
+  background:
+    radial-gradient(ellipse at 69% 42%, rgba(107, 207, 162, .13), transparent 27%),
+    radial-gradient(ellipse at 81% 58%, rgba(105, 137, 232, .14), transparent 29%);
+  filter: blur(34px);
+}
+.page-hero::before { opacity: .72; }
 .hero-content, .page-hero .wrap { position: relative; z-index: 3; }
 .eyebrow, .kicker, .card-no, .tag { display: flex; align-items: center; gap: 10px; color: #80c9a8; font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
 .eyebrow::before { content: ""; width: 32px; height: 1px; background: currentColor; }
@@ -73,15 +95,13 @@ p { margin-top: 0; }
 .scroll-note { position: absolute; right: 22px; top: 47%; color: #6f8580; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; writing-mode: vertical-rl; }
 .page-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; font-size: 19px; }
 
-.sculpture-canvas { position: absolute; top: 6%; right: 5%; width: 49%; height: 88%; z-index: 1; pointer-events: none; filter: saturate(.82); }
-.page-hero .sculpture-canvas { top: 10%; right: 6%; width: 43%; height: 80%; opacity: .88; }
 .section { padding: 116px 0; }
 .section.alt { background: rgba(8, 18, 21, .62); }
 .section-head { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; margin-bottom: 56px; }
 .section-head h2, .split h2 { max-width: 860px; margin: 0; font-size: clamp(39px, 5.2vw, 72px); line-height: .98; }
 .section-head p { max-width: 580px; margin-top: 12px; }
 .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.service-card { min-height: 420px; padding: 38px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(145deg, rgba(13, 29, 31, .86), rgba(7, 17, 22, .82)); box-shadow: 0 22px 60px rgba(0, 0, 0, .14); transition: transform .3s, border-color .3s; transform-style: preserve-3d; }
+.service-card { min-height: 420px; padding: 38px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(145deg, rgba(13, 29, 31, .86), rgba(7, 17, 22, .82)); box-shadow: 0 22px 60px rgba(0, 0, 0, .14); transition: transform .3s, border-color .3s; }
 .service-card::after { content: ""; position: absolute; width: 260px; height: 260px; top: -100px; right: -100px; border-radius: 50%; background: #4bb886; filter: blur(70px); opacity: .12; }
 .service-card.blue::after { background: #5576d4; }
 .service-card:hover { transform: translateY(-5px); border-color: rgba(115, 190, 160, .38); }
@@ -190,7 +210,7 @@ p { margin-top: 0; }
   .process-row { grid-template-columns: 48px 1fr; }
   .process-row p { grid-column: 2; }
   .cta .btn { justify-self: start; }
-  .sculpture-canvas { right: 2%; width: 70%; opacity: .48; }
+  .hero::before, .page-hero::before { opacity: .68; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1/-1; }
 }
@@ -222,7 +242,7 @@ p { margin-top: 0; }
   .footer-brand { grid-column: auto; }
   .footer-legal { padding: 20px; }
   .footer-bottom { flex-direction: column; }
-  .sculpture-canvas { opacity: .3; }
+  .hero::before, .page-hero::before { opacity: .52; }
   .scroll-note { display: none; }
 }
 
