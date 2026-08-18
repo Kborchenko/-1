@@ -3,7 +3,6 @@ const pages = {
   "services.html": "Услуги и цены",
   "recruitment.html": "Подбор персонала",
   "advertising.html": "Маркетинг",
-  "cases.html": "Кейсы",
   "about.html": "О нас",
   "careers.html": "Сотрудничество",
   "contacts.html": "Контакты"
@@ -18,7 +17,7 @@ if (headerMount) {
 }
 
 if (footerMount) {
-  footerMount.innerHTML = `<footer class="site-footer"><div class="wrap"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html">DIGITAL<i>/</i>NETWORK</a><p>Подбор персонала и маркетинговый консалтинг для бизнеса.</p></div><div class="footer-col"><strong>Практики</strong><a href="recruitment.html">Подбор персонала</a><a href="advertising.html">Маркетинг и digital</a><a href="services.html">Услуги и цены</a></div><div class="footer-col"><strong>Контакты</strong><a href="tel:+79000715702">+7 900 071-57-02</a><a href="mailto:luckmanovadaniya@mail.ru">luckmanovadaniya@mail.ru</a><a href="privacy.html">Политика обработки данных</a><a href="personal-data.html">Согласие на обработку данных</a></div></div><div class="footer-bottom"><span>© 2025 DIGITAL NETWORK</span><span>ИП Лукманова Дания Рафкатовна · ОГРНИП 325450000030870 · ИНН 451901907462</span></div></div></footer>`;
+  footerMount.innerHTML = `<footer class="site-footer"><div class="wrap"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html">DIGITAL<i>/</i>NETWORK</a><p>Подбор персонала и маркетинговый консалтинг для бизнеса.</p></div><div class="footer-col"><strong>Практики</strong><a href="recruitment.html">Подбор персонала</a><a href="advertising.html">Маркетинг и digital</a><a href="services.html">Услуги и цены</a></div><div class="footer-col"><strong>Контакты</strong><a href="tel:+79000715702">+7 900 071-57-02</a><a href="mailto:luckmanovadaniya@mail.ru">luckmanovadaniya@mail.ru</a><a href="privacy.html">Политика обработки данных</a><a href="personal-data.html">Согласие на обработку данных</a></div><div class="footer-col footer-legal"><strong>Реквизиты</strong><span>ИП Лукманова Дания Рафкатовна</span><span>ИНН 451901907462</span><span>ОГРНИП 325450000030870</span><address><b>Юридический адрес</b>641084, Россия, Курганская область, Сафакулевский р-н, с. Камышное, ул. Труда, д. 11</address></div></div><div class="footer-bottom"><span>© 2025 DIGITAL NETWORK</span><span>Работаем с 2025 года</span></div></div></footer>`;
 }
 
 const header = document.querySelector(".site-header");

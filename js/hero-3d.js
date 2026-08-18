@@ -7,13 +7,6 @@
   canvas.setAttribute("aria-hidden", "true");
   host.prepend(canvas);
 
-  for (let index = 1; index <= 2; index += 1) {
-    const orbital = document.createElement("i");
-    orbital.className = `orbital o${index}`;
-    orbital.setAttribute("aria-hidden", "true");
-    host.append(orbital);
-  }
-
   const context = canvas.getContext("2d");
   const uCount = 46;
   const vCount = 12;
